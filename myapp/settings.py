@@ -34,7 +34,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = ["160.251.72.208"]
+ALLOWED_HOSTS = ["predict-ponv.com"]
 
 # Application definition
 
