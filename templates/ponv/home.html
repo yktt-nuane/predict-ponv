@@ -1,0 +1,21 @@
+{% extends 'ponv/base.html' %}
+
+{% block content %}
+<div>
+    <p>下記の条件で麻酔を掛けた場合にPONVが発生するかを予測します。</p></br>
+    <p>呼吸器外科手術・静脈麻酔・PONV予防投与なし</p></br>
+    <p>「anxiety」は、感じている不安を0~21点で入力してください。（HADS scoreを代用）</p></br>
+    <p>＊注意＊　テスト運用です。</p></br>
+</div>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+{% if form.is_valid %}
+<br>
+<p> The model predicted: <b>{{ prediction_name }}</b></p>
+{% endif %}
+
+{% endblock %}
