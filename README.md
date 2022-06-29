@@ -10,7 +10,10 @@ http://predict-ponv.com
 
 Enter the information below to predict whether it will be PONV or not.
 
-・age
 ・height
-・weight
+・smoke
 ・anxiety
+
+## Notice
+
+It is a test operation.
