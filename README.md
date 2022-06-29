@@ -1,4 +1,4 @@
-# ponv_prediction
+# Predict PONV
 
 This is an app for predicting the occurrence of PONV when thoracic respiratory surgery is managed with intravenous anesthesia.
 
