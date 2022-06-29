@@ -13,19 +13,18 @@ def predict_model(request):
         # check whether it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
-            age = form.cleaned_data['age']
             height = form.cleaned_data['height']
-            weight = form.cleaned_data['weight']
+            smoke = form.cleaned_data['smoke']
             anxiety = form.cleaned_data['anxiety']
 
             # Run new features through ML model
             model_features = [
-                [age, height, weight, anxiety]]
+                [height, smoke, anxiety]]
             loaded_model = pickle.load(
                 open("predict_model/ponv_model.pkl", 'rb'))
             prediction = loaded_model.predict(model_features)[0]
 
-            prediction_dict = [{'name':'ponvになる可能性は低いです'},{'name':'PONVになる可能性が高いです'}]
+            prediction_dict = [{'name':'unlikely to be a PONV'},{'name':'Likely to be PONV'}]
 
             prediction_name = prediction_dict[prediction]['name']
 
