@@ -8,7 +8,7 @@ http://predict-ponv.com
 
 ## How to use
 
-Enter the information below to predict whether it will be PONV or not.
+Enter the information below to predict whether it will be PONV or not and answer if prophylaxis is needed.
 
 ・height
 ・smoke

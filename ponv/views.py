@@ -24,7 +24,7 @@ def predict_model(request):
                 open("predict_model/ponv_model.pkl", 'rb'))
             prediction = loaded_model.predict(model_features)[0]
 
-            prediction_dict = [{'name':'Prophylactic medication is not recommended as it is unlikely to result in PONV.'},{'name':'Prophylactic medication is recommended as it is likely to result in PONV.'}]
+            prediction_dict = [{'name':'It is unlikely to become a PONV. Prophylactic administration is not recommended.'},{'name':'It is likely to be PONV. Prophylactic administration is recommended.'}]
 
             prediction_name = prediction_dict[prediction]['name']
 
