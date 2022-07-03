@@ -4,9 +4,10 @@
 <div>
     <p>Predict whether PONV will occur when anesthetized under the following conditions.</p></br>
     <p>Thoracoscopic surgery, Intravenous anesthesia, No prophylaxis for PONV.</p></br>
+    <p>This prediction model is created based on Japanese data.</p></br>
     <p>「smoke」 : if you never smoked, impout 0 else imput 1.</p></br>
     <p>「anxiety」 : Enter the degree of anxiety as a number from 1 to 21.(insted HADS)</p></br>
-    <p><font color="red">Note!! It is a test operation.</font></p></br>
+    <p><font color="red">Notes!! It is a test operation.</font></p></br>
 </div>
 <form action="" method="post">
     {% csrf_token %}
@@ -16,7 +17,7 @@
 
 {% if form.is_valid %}
 <br>
-<p> The model predicted: <b>{{ prediction_name }}</b></p>
+<p> The model predicted: <b>{{ prediction_name }}</b></p></br>
 {% endif %}
 
 {% endblock %}
