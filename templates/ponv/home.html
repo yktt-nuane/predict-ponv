@@ -4,14 +4,9 @@
 <div>
     <p>Predict PONV (postoperative nausea and vomiting) and answer if prophylaxis is needed.</p></br>
     <p>Conditions : Thoracoscopic surgery, Intravenous anesthesia, No prophylaxis for PONV.</p></br>
-    <p>This prediction model is created based on Japanese data.</p></br>
-    <p>「sex」: Female impout 0, Male imput 1.</p></br>
-    <p>「smoke」: if you never smoked, impout 0 else imput 1.</p></br>
-    <p>「ponv_history」: If you have experienced PONV or motion sickness, others imput 1.</p></br>
-    <p>「anxiety」: Enter the degree of anxiety as a number from 1 to 21.</br>
-        (instead Japanese version of Hospital Anxiety and Depression Scale)</p></br>
     <p><b><font color="red">Notes: It is a test operation. Do not use in medical practice.</font></b></p></br>
 </div>
+
 <form action="" method="post">
     {% csrf_token %}
     {{ form }}
@@ -19,11 +14,16 @@
 </form>
 
 {% if form.is_valid %}
-</br>
-</br>
-<p> The model predicted: <b>{{ prediction_name }}</b></p>
-
+<div>
+    <p> The model predicted: <b>{{ prediction_name }}</b></p>
+</div>
 {% endif %}
+
+<div>
+    <p>「sex」: Female impout 0, Male imput 1.</p>
+    <p>「smoke」: if you never smoked, impout 0 else imput 1.</p>
+    <p>「ponv_history」: If you have experienced PONV or motion sickness, others imput 1.</p>
+    <p>「anxiety」: Enter the degree of anxiety as a number from 1 to 21.</br>
+        (instead Japanese version of Hospital Anxiety and Depression Scale)</p></br>
+</div>
 {% endblock %}
-</br>
-</br>
