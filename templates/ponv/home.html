@@ -6,16 +6,18 @@
     <p>Conditions : Thoracoscopic surgery, Intravenous anesthesia, No prophylaxis for PONV.</p></br>
     <p><b><font color="red">Notes: It is a test operation. Do not use in medical practice.</font></b></p></br>
 </div>
-
+</br>
 <form action="" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">
 </form>
-
+</br>
 {% if form.is_valid %}
 <div>
+    </br>
     <p> The model predicted: <b>{{ prediction_name }}</b></p>
+    </br>  
 </div>
 {% endif %}
 
