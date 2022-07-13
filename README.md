@@ -4,7 +4,7 @@ This is an app for predicting the occurrence of PONV when thoracic respiratory s
 
 ## Access
 
-http://predict-ponv.com
+https://predict-ponv.com
 
 ## How to use
 
