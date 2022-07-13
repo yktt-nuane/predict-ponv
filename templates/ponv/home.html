@@ -9,23 +9,43 @@
 </br>
 <form action="" method="post">
     {% csrf_token %}
-    {{ form }}
+
+    <div>
+        <label>{{ form.age.label }}</label>: {{ form.age }}
+        <p>{{ form.age.errors }}</p>
+    </div>
+    <div>
+        <label>{{ form.sex.label }}</label>: {{ form.sex }}&nbsp;&nbsp;&nbsp;&nbsp;{{ form.sex.help_text }}
+        <p>{{ form.sex.errors }}</p>
+    </div>
+    <div>
+        <label>{{ form.smoke.label }}</label>: {{ form.smoke }}&nbsp;&nbsp;&nbsp;&nbsp;{{ form.smoke.help_text }}
+        <p>{{ form.smoke.errors }}</p>
+        
+    </div>
+    <div>
+        <label>{{ form.ponv_history.label }}</label>: {{ form.ponv_history }}&nbsp;&nbsp;&nbsp;&nbsp;{{ form.ponv_history.help_text }}
+        <p>{{ form.ponv_history.errors }}</p>
+    </div>
+    <div>
+        <label>{{ form.anxiety.label }}</label>: {{ form.anxiety }}&nbsp;&nbsp;&nbsp;&nbsp;{{ form.anxiety.help_text }}
+        <p>{{ form.anxiety.errors }}</p>
+        <p>Anxiety is evaluated as an alternative to the Japanese version of Hospital Anxiety and Depression Scale.</p>
+    </div>
+    
     <input type="submit" value="Submit">
 </form>
-</br>
+
+
+
 {% if form.is_valid %}
 <div>
     </br>
     <p> The model predicted: <b>{{ prediction_name }}</b></p>
+    </br>
+    </br> 
     </br>  
 </div>
 {% endif %}
 
-<div>
-    <p>「sex」: Female impout 0, Male imput 1.</p>
-    <p>「smoke」: if you never smoked, impout 0, else imput 1.</p>
-    <p>「ponv_history」: If you have experienced PONV or motion sickness, imput 0, others imput 1.</p>
-    <p>「anxiety」: Enter the degree of anxiety as a number from 0 to 21.</br>
-        (instead Japanese version of Hospital Anxiety and Depression Scale)</p></br>
-</div>
 {% endblock %}
