@@ -14,14 +14,14 @@ def predict_model(request):
         if form.is_valid():
             # process the data in form.cleaned_data as required
             age = form.cleaned_data['age']
-            sex = form.cleaned_data['sex']
+            gender = form.cleaned_data['gender']
             smoke = form.cleaned_data['smoke']
             ponv_history = form.cleaned_data['ponv_history']
             anxiety = form.cleaned_data['anxiety']
 
             # Run new features through ML model
             model_features = [
-                [age, sex, smoke, ponv_history, anxiety]]
+                [age, gender, smoke, ponv_history, anxiety]]
             loaded_model = pickle.load(
                 open("predict_model/ponv_model.pkl", 'rb'))
             prediction = loaded_model.predict(model_features)[0]

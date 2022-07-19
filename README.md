@@ -11,7 +11,7 @@ https://predict-ponv.com
 Enter the information below to predict whether it will be PONV or not and answer if prophylaxis is needed.
 
 ・age
-・sex
+・gender
 ・smoke
 ・ponv_history
 ・anxiety
