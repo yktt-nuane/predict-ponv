@@ -19,18 +19,18 @@
         <p>{{ form.gender.errors }}</p>
     </div>
     <div>
-        <label>{{ form.smoke.label }}</label>: {{ form.smoke }}&nbsp;&nbsp;&nbsp;&nbsp;{{ form.smoke.help_text }}
-        <p>{{ form.smoke.errors }}</p>
+        <label>{{ form.smoking_history.label }}</label>: {{ form.smoking_history }}&nbsp;&nbsp;&nbsp;&nbsp;{{ form.smoking_history.help_text }}
+        <p>{{ form.smoking_history.errors }}</p>
         
     </div>
     <div>
-        <label>{{ form.ponv_history.label }}</label>: {{ form.ponv_history }}&nbsp;&nbsp;&nbsp;&nbsp;{{ form.ponv_history.help_text }}
-        <p>{{ form.ponv_history.errors }}</p>
+        <label>{{ form.history_of_PONV.label }}</label>: {{ form.history_of_PONV }}&nbsp;&nbsp;&nbsp;&nbsp;{{ form.history_of_PONV.help_text }}
+        <p>{{ form.history_of_PONV.errors }}</p>
     </div>
     <div>
         <label>{{ form.anxiety.label }}</label>: {{ form.anxiety }}&nbsp;&nbsp;&nbsp;&nbsp;{{ form.anxiety.help_text }}
         <p>{{ form.anxiety.errors }}</p>
-        <p>Anxiety is evaluated as an alternative to the Japanese version of Hospital Anxiety and Depression Scale.</p>
+        <p>Anxiety score quantified by HADS.</p>
     </div>
     
     <input type="submit" value="Submit">
